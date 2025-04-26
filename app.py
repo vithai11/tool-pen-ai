@@ -12,7 +12,7 @@ if 'data' not in st.session_state:
 # Model ban đầu
 if 'model' not in st.session_state:
     st.session_state.model = XGBClassifier(use_label_encoder=False, eval_metric='mlogloss')
-    st.session_state.model.fit([[0, 0]], [0])  # Fit fake để khởi tạo
+    st.session_state.model.fit([[0, 0], [1, 1]], [0, 1])  # Fit fake đúng 2 class
 
 # Map
 move_mapping = {'Trái': 0, 'Giữa': 1, 'Phải': 2}

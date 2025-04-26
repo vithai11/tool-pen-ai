@@ -67,7 +67,7 @@ if player_shot or player_shot_center or player_shot_right:
         st.write(f"Dự đoán của AI: {result}")
 
 # Gợi ý cho lần kế tiếp
-if len(st.session_state.data) >= 5:
+if len(st.session_state.data) >= 1:
     next_moves = []
     for i in range(3):
         proba = st.session_state.model.predict_proba([[i]])[0]
